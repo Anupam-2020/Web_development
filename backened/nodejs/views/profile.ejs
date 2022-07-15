@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+</head>
+<body>
+    <%- include('common/header'); %>
+    <h1>Profile page(UserObj Profile)</h1>
+    <h1>Welcome <%= userObj.name %></h1>
+    <h3>Email: <%= userObj.email%></h3>
+    <h3>City: <%= userObj.city%></h3>
+    <ul>
+        <% userObj.skills.forEach((item) =>{ %>
+            <li><%= item%></li>
+        <% })%>
+    </ul>
+    <br><br>
+    <h1>Profile page(User Profile)</h1>
+    <h1>Welcome <%= user[0].name %></h1>
+    <h3>Email: <%= user[0].email%></h3>
+    <h3>City: <%= user[0].city%></h3>
+</body>
+</html>
